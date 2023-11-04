@@ -1,4 +1,4 @@
-package handler
+package main 
  
 import (
   "fmt"
@@ -7,10 +7,27 @@ import (
 	"io"
 	"log"
 	"os"
+	"context"
+"github.com/tmc/langchaingo/llms/openai"
 )
+
+
+func main() {
+	llm, err := openai.New()
+	if err != nil {
+		log.Fatal(err)
+	}
+	prompt := "What would be a good company name for a company that makes colorful socks?"
+	completion, err := llm.Call(context.Background(), prompt)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(completion)
+}
  
 func Handler(w http.ResponseWriter, r *http.Request) {
-body := []byte(`{"model":"mistral"}`)
+
+	body := []byte(`{"model":"mistral"}`)
 	resp, err := http.Post("http://localhost:11434/api/generate", "application/json", bytes.NewBuffer(body))
 
 	if err != nil {
@@ -22,9 +39,7 @@ body := []byte(`{"model":"mistral"}`)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-  fmt.Fprintf(w, string(responseData))
-
+	fmt.Println(string(responseData))
 }
 
 
