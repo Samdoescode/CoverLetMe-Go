@@ -1,8 +1,0 @@
-import { type APIEvent, json } from "solid-start/api";
-import hogwarts from "./hogwarts";
- 
-export async function GET({ params }: APIEvent) {
-  console.log(`House: ${params.house}, Year: ${params.year}`);
-  const coverLetter = await ;
-  return json({ coverLetter });
-}
