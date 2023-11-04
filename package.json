@@ -2,7 +2,7 @@
   "name": "coverLetMe",
   "scripts": {
     "dev": "solid-start dev",
-    "build": "solid-start build",
+    "build": "solid-start build --output output",
     "start": "solid-start start"
   },
   "type": "module",
@@ -18,7 +18,8 @@
     "@solidjs/meta": "^0.29.1",
     "@solidjs/router": "^0.8.3",
     "solid-js": "^1.8.5",
-    "solid-start": "^0.3.9"
+    "solid-start": "^0.3.9",
+    "solid-start-vercel": "^0.3.9"
   },
   "engines": {
     "node": "18"
