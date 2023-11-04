@@ -1,0 +1,51 @@
+{
+  "_Counter-e0898ea6.js": {
+    "file": "assets/Counter-e0898ea6.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ]
+  },
+  "src/entry-client.css": {
+    "file": "assets/entry-client-3ccd35e0.css",
+    "src": "src/entry-client.css"
+  },
+  "src/entry-client.tsx": {
+    "css": [
+      "assets/entry-client-3ccd35e0.css"
+    ],
+    "dynamicImports": [
+      "src/routes/[...404].tsx",
+      "src/routes/about.tsx",
+      "src/routes/index.tsx"
+    ],
+    "file": "assets/entry-client-06c2bd74.js",
+    "isEntry": true,
+    "src": "src/entry-client.tsx"
+  },
+  "src/routes/[...404].tsx": {
+    "file": "assets/_...404_-041a6d80.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/[...404].tsx"
+  },
+  "src/routes/about.tsx": {
+    "file": "assets/about-c0a223e9.js",
+    "imports": [
+      "src/entry-client.tsx",
+      "_Counter-e0898ea6.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/about.tsx"
+  },
+  "src/routes/index.tsx": {
+    "file": "assets/index-aae1d5d7.js",
+    "imports": [
+      "src/entry-client.tsx",
+      "_Counter-e0898ea6.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/index.tsx"
+  }
+}
